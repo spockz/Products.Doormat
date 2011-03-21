@@ -1,0 +1,9 @@
+<tal:getDoormat
+    tal:define="doormat_brains python: 
+      context.portal_catalog(portal_type='Doormat',sort_on='created')"
+    tal:condition="python: len(doormat_brains) > 0">
+  <tal:getView
+      tal:define="doormat_object python: doormat_brains[0].getObject()"
+      tal:content="structure doormat_object/@@doormat-view"
+    />
+</tal:getDoormat>

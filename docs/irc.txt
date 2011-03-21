@@ -1,0 +1,95 @@
+(02:11:13 PM) malthe: I'm getting very bad performance (14 seconds) on simple local searches (passing a path query to search only below a particular folder); is this possibly a regression?
+(02:13:54 PM) CodeMonster: haven't seen issues with large folders and path indexes on p4
+(02:14:57 PM) malthe: I'm going to profile it next
+(02:15:04 PM) malthe: first trying to see where the threads are
+(02:16:13 PM) malthe:   File "/home/mborch/co/dist/Products.Doormat-0.5-py2.4.egg/Products/Doormat/browser/views.py", line 64, in getDoormatData ?
+(02:16:52 PM) malthe:     item = brain.getObject()
+(02:17:06 PM) malthe: so it's fetching an object from a brain, and that just takes nearly infinite time somehow?
+(02:17:29 PM) rnix: malthe: how many objects are returend by query?
+(02:17:44 PM) rnix: getObject() is always more or less expensive
+(02:17:55 PM) baekholt: malthe: paste the code? 
+(02:18:12 PM) baekholt: getObject isn't expensive as long as you only do it for a current batch
+(02:18:29 PM) malthe: let me try and stop this doormat thing from kicking in
+(02:18:43 PM) baekholt: but sometimes people do silly things like test for objects returning true, which causes them to render silently
+(02:18:57 PM) malthe: here's my thread-dump: http://pastebin.com/uA3HzunG
+(02:19:19 PM) malthe: ok so its definitely the doormat doing it
+(02:20:14 PM) baekholt: malthe: check for stuff like 
+(02:20:18 PM) baekholt: if object:
+(02:20:25 PM) malthe: right, to check if it renders
+(02:20:26 PM) malthe: let me try
+(02:20:49 PM) baekholt: those are often hidden in templates, as the path expressions will try to render stuff
+(02:21:00 PM) baekholt: tal:condition="object"  == death-trap
+(02:21:21 PM) pigeonflight left the room (quit: Read error: Connection reset by peer).
+(02:21:23 PM) malthe: ok this is just badly programmed:
+(02:21:36 PM) baekholt: ;) 
+(02:21:42 PM) malthe: e.g. brains = section_brain.getObject().getFolderContents()
+(02:21:49 PM) baekholt: eeek
+(02:21:53 PM) aclark: good times
+(02:21:54 PM) malthe: that's done recursively
+(02:22:00 PM) baekholt: F***
+(02:22:03 PM) malthe: let's do an svn blame hehe
+(02:22:43 PM) aclark: we've all done it :-)
+(02:23:50 PM) malthe: khink, you're the perpetrator!
+(02:24:12 PM) malthe: let's go through this and see what can be done
+(02:25:01 PM) aclark: CodeMonster: http://plone.org/products/doormat apparently
+(02:25:06 PM) malthe: yeah
+(02:25:11 PM) malthe: bloody doormat
+(02:25:13 PM) malthe: client wanted it
+(02:25:32 PM) aclark: Who doesn't want a doormat these days? Although I never knew they were called doormats
+(02:25:59 PM) malthe: ya I want one
+(02:26:04 PM) malthe: but I don't want it to use getFolderContents
+(02:30:09 PM) aclark: malthe: i think people do that because the alternative is often to add an index? Or is there a catalog index avail that people just don't use because they are lazy?
+(02:31:41 PM) malthe: I don't know exactly, but what I see is that getFolderContents in this case returns the entire site
+(02:31:45 PM) malthe: something is fishy
+(02:32:34 PM) aclark: ah
+(02:37:35 PM) baekholt: wtf is a Doormat anyway? 
+(02:38:03 PM) baekholt: malthe: ⬆
+(02:38:34 PM) droogie: baekholt: since visitors have dirty feet they have to clean'em before entering holy places
+(02:38:37 PM) malthe: baekholt, some sort of AT-based dynamic footer
+(02:39:12 PM) malthe: baekholt, aha, this is a funny bug.
+(02:39:18 PM) malthe: it's a Plone-bug, actually.
+(02:39:39 PM) malthe: so: let's say you have a global search, and it's local (so path=/site/...)
+(02:39:42 PM) baekholt: an AT based dynamic footer sounds painful to me
+(02:39:43 PM) aclark: baekholt: http://plone.org/products/doormat/screenshot
+(02:39:49 PM) malthe: now, if some code now uses getFolderContents.py
+(02:39:59 PM) malthe: the path used there won't ever be the "context" path
+(02:40:05 PM) malthe: it will always be the search path
+(02:40:07 PM) baekholt: ah. that sort of Doormat. Who would implement that in AT? 
+(02:40:15 PM) baekholt: make a controlpanel
+(02:40:16 PM) malthe: who would implement Collage in AT
+(02:40:19 PM) malthe: it was "the way" ...
+(02:40:20 PM) baekholt: true
+(02:40:21 PM) baekholt: ;) 
+(02:40:25 PM) aclark: baekholt: khink! :-)
+(02:40:27 PM) ***aclark ducks
+(02:40:33 PM) baekholt: Heck. i implemented portlets in AT once
+(02:40:36 PM) aclark: hah
+(02:40:49 PM) baekholt: we have all done our share of evil
+(02:40:58 PM) rnix: there is even a vocabulary manager based on AT ;)
+(02:41:27 PM) khink: aclark: khink reads up on previous messages ledaing up to this
+(02:41:34 PM) khink: leading
+(02:42:08 PM) baekholt: rnix: i have used it.
+(02:42:12 PM) baekholt: i won't anymore
+(02:42:41 PM) aclark: khink: Products.Doormat discussion, I "svn blamed" you :-) Not your fault though apparently…
+(02:44:31 PM) khink: malthe, baekholt, aclark: By all means blame me. I'd like to improve on the product. What's the problem?
+(02:44:32 PM) malthe: baekholt, I'll submit a bug-report that clarifies the problem.
+(02:44:41 PM) malthe: khink, hang on, let me first write up the report.
+(02:44:45 PM) malthe: it'll be easier to explain it.
+(02:44:57 PM) khink: malthe: ok. did i add a tracker on plone.org/products yet?
+(02:45:04 PM) malthe: it's a Plone bug, but Doormat's code is also pretty bad in how it does it's traversing.
+(02:45:23 PM) malthe: khink, not sure if you did, but it's not a Doormat bug, just a Doormat annoyance.
+(02:45:52 PM) khink: malthe: Anything to keep you happy ;)
+(02:46:26 PM) malthe: hehe
+(02:46:33 PM) khink: http://plone.org/products/doormat/issues
+(02:56:58 PM) malthe: aclark, khink: https://dev.plone.org/plone/ticket/11265
+(02:57:49 PM) malthe:  khink, as for Doormat: don't use the catalog -- just traverse using objectValues()
+(02:57:56 PM) malthe: all your doormat objects are in the object cache anyway.
+(02:58:05 PM) baekholt [~baekholt@77.88.72.162] entered the room.
+(02:58:05 PM) baekholt left the room (quit: Changing host).
+(02:58:05 PM) baekholt [~baekholt@plone/elvix] entered the room.
+(02:58:05 PM) mode (+o baekholt) by ChanServ
+(02:58:09 PM) malthe: and you end up using ``getObject`` on them anyway.
+(02:58:26 PM) malthe: baekholt, fyi: https://dev.plone.org/plone/ticket/11265
+(02:59:22 PM) baekholt: malthe: oh oh
+(02:59:25 PM) baekholt: that's rather ugly
+(02:59:28 PM) malthe: ya

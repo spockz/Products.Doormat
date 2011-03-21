@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+  >
+
+<div id="doormat-container"
+    tal:define="
+        doormat_data view/getDoormatData;
+        nr_of_cols python:len(doormat_data);
+        "
+    tal:attributes="class string:columns-${nr_of_cols}"
+    metal:define-macro="body">
+
+  <h2 tal:define="title view/getDoormatTitle"
+      tal:condition="title"
+      tal:content="title"
+      >
+    [Doormat title]
+  </h2>
+  <div tal:attributes="class string:doormatColumn column-${repeat/column/index}"
+       tal:repeat="column doormat_data">
+    <h3 tal:condition="column/show_title"
+        tal:content="column/column_title">
+      [Column title]
+    </h3>
+    <dl class="doormatSection" tal:repeat="section column/column_sections">
+      <dt class="doormatSectionHeader"
+          tal:condition="section/show_title"
+          tal:content="section/section_title">[title for section]</dt>
+      <dd class="doormatSectionBody" tal:repeat="link section/section_links">
+        <a tal:condition="python: link.get('link_url', None)" 
+            tal:attributes="
+              href link/link_url;
+              class link/link_class;
+              " 
+            tal:content="link/link_title">
+          [link title]
+        </a>
+        <div tal:condition="python: link.get('content', None)" 
+            tal:replace="structure link/content">
+            [content]
+        </div>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+</html>

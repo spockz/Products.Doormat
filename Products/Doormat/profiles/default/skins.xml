@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<object name="portal_skins"
+        meta_type="Plone Skins Tool"
+        allow_any="False"
+        cookie_persistence="False"
+        request_varname="plone_skin">
+
+ <object name="doormat_images"
+         meta_type="Filesystem Directory View"
+         directory="Doormat/skins/doormat_images"/>
+ <object name="doormat_styles"
+         meta_type="Filesystem Directory View"
+         directory="Doormat/skins/doormat_styles"/>
+ <object name="doormat_templates"
+         meta_type="Filesystem Directory View"
+         directory="Doormat/skins/doormat_templates"/>
+ 
+ <skin-path name="*">
+  <layer insert-after="custom" 
+         name="doormat_images"/>
+  <layer insert-after="custom" 
+         name="doormat_styles"/>
+  <layer insert-after="custom" 
+         name="doormat_templates"/>
+ </skin-path>
+
+</object>

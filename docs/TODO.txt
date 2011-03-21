@@ -1,0 +1,10 @@
+To do
+=====
+
+* Auto-create 'doormat' on install
+
+* Remove instances of content types on uninstall.
+
+* Add some sort of caching for getDoormatData and getDoormatTitle methods, or
+  for the entire viewlet. Or at least get an idea of how expensive they are.
+  Currently the viewlet computes the whole doormat each time it is rendered.

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="portal_factory" meta_type="Plone Factory Tool">
+ <factorytypes>
+  <type portal_type="Doormat"/>
+  <type portal_type="DoormatColumn"/>
+  <type portal_type="DoormatSection"/>
+  <type portal_type="DoormatReference"/>
+  <type portal_type="DoormatMixin"/>
+ </factorytypes>
+</object>

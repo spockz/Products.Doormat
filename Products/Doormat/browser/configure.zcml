@@ -1,0 +1,55 @@
+<configure 
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="Doormat">
+
+
+  <browser:page
+     for="..content.interfaces.IDoormat"
+     name="doormat-view"
+     class=".views.DoormatView"
+     template="doormat_view.pt"
+     permission="zope2.View"
+     />
+
+  <browser:page
+     for="..content.interfaces.IDoormat"
+     name="doormat-view-bare"
+     class=".views.DoormatView"
+     template="doormat_bare_view.pt"
+     permission="zope2.View"
+     />
+
+  <browser:page
+      for="..content.interfaces.IDoormat"
+      name="doormat-macros"
+      template="macros.pt"
+      permission="zope.Public"
+      />
+
+  <browser:viewlet
+      name="doormat.footer"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      template="doormat_viewlet.pt"
+      permission="zope2.View"
+      layer=".interfaces.IDoormatLayer" 
+      />
+
+ <browser:viewlet
+      name="doormat.footer.bare"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      template="doormat_viewlet_bare.pt"
+      permission="zope2.View"
+      layer=".interfaces.IDoormatLayer" 
+      />
+
+  <browser:resourceDirectory
+      name="Products.Doormat.stylesheets"
+      directory="stylesheets"
+      />
+
+</configure>

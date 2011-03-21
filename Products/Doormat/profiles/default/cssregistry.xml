@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<object name="portal_css" meta_type="Stylesheets Registry">
+ <!-- EXAMPLE DEFINITION
+ <stylesheet title=""
+             cacheable="True"
+             compression="safe"
+             cookable="True"
+             enabled="1"
+             expression=""
+             id="myfancystyle.css"
+             media="all"
+             rel="stylesheet"
+             rendering="import"/>
+ -->
+
+ <!-- ##code-section cssregistry.xml -->
+ <stylesheet title=""
+    id="++resource++Products.Doormat.stylesheets/doormat.css"
+    media="screen" 
+    rel="stylesheet" 
+    rendering="import"
+    cacheable="True" 
+    compression="safe" 
+    cookable="False"
+    enabled="1" 
+    expression=""
+    />
+
+
+ <!-- ##/code-section cssregistry.xml -->
+</object>
