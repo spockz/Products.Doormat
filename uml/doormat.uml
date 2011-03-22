@@ -48,7 +48,7 @@
 			UML 1.4
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Mar 22 11:06:47 CET 2011'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Mar 22 22:00:03 CET 2011'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.32.1(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -3323,6 +3323,21 @@
                     <UML:DataType xmi.idref = '9627e80f-cde2-5780-9619-55e71d92d8ea'/>
                   </UML:StructuralFeature.type>
                 </UML:Attribute>
+                <UML:Attribute xmi.id = '-64--88--72-113-78bd338f:12edcfc60e5:-8000:000000000000135E'
+                  name = 'limit' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+                  changeability = 'changeable' targetScope = 'instance'>
+                  <UML:StructuralFeature.multiplicity>
+                    <UML:Multiplicity xmi.id = '-64--88--72-113-78bd338f:12edcfc60e5:-8000:000000000000135F'>
+                      <UML:Multiplicity.range>
+                        <UML:MultiplicityRange xmi.id = '-64--88--72-113-78bd338f:12edcfc60e5:-8000:0000000000001360'
+                          lower = '1' upper = '1'/>
+                      </UML:Multiplicity.range>
+                    </UML:Multiplicity>
+                  </UML:StructuralFeature.multiplicity>
+                  <UML:StructuralFeature.type>
+                    <UML:DataType xmi.idref = 'e12f147a-d786-5cd7-a838-1bd9f02fdbf4'/>
+                  </UML:StructuralFeature.type>
+                </UML:Attribute>
               </UML:Classifier.feature>
             </UML:Class>
             <UML:Generalization xmi.id = '-64--88--72-113-7b84db25:12edce22535:-8000:0000000000001356'
@@ -5111,7 +5126,7 @@
       strokecolor="black"
     />
     <group name="Fig16.4"
-         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[705, 360, 156, 63]"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[705, 360, 156, 72]"
          href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
          fill="0"
          fillcolor="white"
@@ -5125,7 +5140,7 @@
         x="705"
         y="360"
         width="156"
-        height="63"
+        height="72"
         fill="0"
         fillcolor="white"
         stroke="0"
@@ -5167,7 +5182,7 @@
         x="705"
         y="392"
         width="156"
-        height="22"
+        height="16"
         fill="0"
         fillcolor="white"
         stroke="0"
@@ -5179,10 +5194,26 @@
         textsize="12"
         justification="Left"
       >showMoreText : string</text>
+      <text name="Fig16.4.4"
+        x="705"
+        y="408"
+        width="156"
+        height="22"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >limit : int</text>
     </group>
     <rectangle name="Fig16.5"
       x="704"
-      y="423"
+      y="431"
       width="158"
       height="1"
       fill="1"
@@ -5191,7 +5222,7 @@
       strokecolor="black"
     />
     <group name="Fig16.6"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[705, 424, 156, 28]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[705, 432, 156, 21]"
          href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
          fill="0"
          fillcolor="white"
@@ -5203,9 +5234,9 @@
       
       <rectangle name="Fig16.6.0"
         x="705"
-        y="424"
+        y="432"
         width="156"
-        height="28"
+        height="21"
         fill="0"
         fillcolor="white"
         stroke="0"

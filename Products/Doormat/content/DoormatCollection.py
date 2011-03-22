@@ -38,7 +38,6 @@ schema = Schema((
             label_msgid='Doormat_label_collection',
             i18n_domain='Doormat',
         ),
-        allowed_types=("Topic"),
         relationship="internally_references_to_collection",
     ),
     ReferenceField(
@@ -55,6 +54,14 @@ schema = Schema((
         widget=StringField._properties['widget'](
             label='Showmoretext',
             label_msgid='Doormat_label_showMoreText',
+            i18n_domain='Doormat',
+        ),
+    ),
+    IntegerField(
+        name='limit',
+        widget=IntegerField._properties['widget'](
+            label='Limit',
+            label_msgid='Doormat_label_limit',
             i18n_domain='Doormat',
         ),
     ),

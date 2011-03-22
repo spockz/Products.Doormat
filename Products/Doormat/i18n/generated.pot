@@ -33,6 +33,11 @@ msgstr ""
 msgid "Doormat_label_internal_link"
 msgstr ""
 
+#. Default: "Limit"
+#: content/DoormatCollection.py
+msgid "Doormat_label_limit"
+msgstr ""
+
 #. Default: "Showmorelink"
 #: Collection.py
 #: content/Collection.py

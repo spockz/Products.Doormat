@@ -79,7 +79,12 @@ class DoormatView(BrowserView):
                     elif item.portal_type == "Document":
                         text = item.getText()
                     elif item.portal_type == "DoormatCollection":
-                        for nitem in item.getCollection().queryCatalog():
+                        if item.limit > 0:
+                          results = item.getCollection().queryCatalog(sort_limit=item.limit)[:item.limit]
+                        else:
+                          results = item.getCollection().queryCatalog()
+                      
+                        for nitem in results:
                             obj = nitem.getObject()
                             link_dict = {
                                 'content': '', 
