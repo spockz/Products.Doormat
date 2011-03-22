@@ -22,9 +22,11 @@ from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 from Products.Doormat.config import *
 
 # additional imports from tagged value 'import'
-from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
+from archetypes.referencebrowserwidget.widget import ReferenceBrowserWidget
 
 ##code-section module-header #fill in your manual code here
+from zope import schema
+
 ##/code-section module-header
 
 schema = Schema((
@@ -36,6 +38,7 @@ schema = Schema((
             label_msgid='Doormat_label_collection',
             i18n_domain='Doormat',
         ),
+        allowed_types=("Topic"),
         relationship="internally_references_to_collection",
     ),
     ReferenceField(
@@ -45,6 +48,7 @@ schema = Schema((
             label_msgid='Doormat_label_showMoreLink',
             i18n_domain='Doormat',
         ),
+        relationship="more_link_links_to_internal",
     ),
     StringField(
         name='showMoreText',
@@ -84,6 +88,7 @@ class DoormatCollection(BaseContent, DoormatMixin, BrowserDefaultMixin):
     ##/code-section class-header
 
     # Methods
+
 
 registerType(DoormatCollection, PROJECTNAME)
 # end of class DoormatCollection

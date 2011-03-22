@@ -48,7 +48,7 @@
 			UML 1.4
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Mar 22 10:29:56 CET 2011'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Mar 22 11:06:47 CET 2011'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.32.1(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -3243,7 +3243,7 @@
               <UML:ModelElement.taggedValue>
                 <UML:TaggedValue xmi.id = '-64--88--72-113-7b84db25:12edce22535:-8000:0000000000001354'
                   isSpecification = 'false'>
-                  <UML:TaggedValue.dataValue>from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget</UML:TaggedValue.dataValue>
+                  <UML:TaggedValue.dataValue>from archetypes.referencebrowserwidget.widget import ReferenceBrowserWidget</UML:TaggedValue.dataValue>
                   <UML:TaggedValue.type>
                     <UML:TagDefinition xmi.idref = '7fbcc0f1-2d3c-513e-9dd5-3032e2da1bd1'/>
                   </UML:TaggedValue.type>
@@ -3295,6 +3295,15 @@
                       </UML:Multiplicity.range>
                     </UML:Multiplicity>
                   </UML:StructuralFeature.multiplicity>
+                  <UML:ModelElement.taggedValue>
+                    <UML:TaggedValue xmi.id = '-64--88--72-113-78bd338f:12edcfc60e5:-8000:0000000000000DE0'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>more_link_links_to_internal</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'd8173c3e-2367-5adf-9fee-a5f97447736b'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
+                  </UML:ModelElement.taggedValue>
                   <UML:StructuralFeature.type>
                     <UML:DataType xmi.idref = 'e85df323-29b1-5d10-98de-7c2a1c60f9da'/>
                   </UML:StructuralFeature.type>
@@ -5069,7 +5078,7 @@
       justification="Center"
     >DoormatCollection</text>
     <group name="Fig16.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[705, 337, 154, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[705, 337, 163, 0]"
          href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
          fill="0"
          fillcolor="white"
@@ -5083,7 +5092,7 @@
       <rectangle name="Fig16.2.0"
         x="705"
         y="337"
-        width="154"
+        width="163"
         height="0"
         fill="0"
         fillcolor="white"
