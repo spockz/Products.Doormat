@@ -25,5 +25,9 @@ class IDoormatMixin(Interface):
     """Marker interface for .DoormatMixin.DoormatMixin
     """
 
+class IDoormatCollection(Interface):
+    """Marker interface for .DoormatCollection.DoormatCollection
+    """
+
 ##code-section FOOT
 ##/code-section FOOT

@@ -21,9 +21,30 @@ msgstr ""
 msgid "Doormat_help_showTitle"
 msgstr ""
 
+#. Default: "Collection"
+#: Collection.py
+#: content/Collection.py
+#: content/DoormatCollection.py
+msgid "Doormat_label_collection"
+msgstr ""
+
 #. Default: "Internal_link"
 #: content/DoormatReference.py
 msgid "Doormat_label_internal_link"
+msgstr ""
+
+#. Default: "Showmorelink"
+#: Collection.py
+#: content/Collection.py
+#: content/DoormatCollection.py
+msgid "Doormat_label_showMoreLink"
+msgstr ""
+
+#. Default: "Showmoretext"
+#: Collection.py
+#: content/Collection.py
+#: content/DoormatCollection.py
+msgid "Doormat_label_showMoreText"
 msgstr ""
 
 #. Default: "Show title in Doormat"

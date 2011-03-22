@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# File: DoormatReference.py
+# File: DoormatCollection.py
 #
 # Copyright (c) 2011 by unknown <unknown>
 # Generator: ArchGenXML Version 2.6
@@ -16,7 +16,7 @@ from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
 from zope.interface import implements
 import interfaces
-
+from Products.Doormat.content.DoormatMixin import DoormatMixin
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 
 from Products.Doormat.config import *
@@ -30,13 +30,29 @@ from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import Reference
 schema = Schema((
 
     ReferenceField(
-        name='internal_link',
+        name='collection',
         widget=ReferenceBrowserWidget(
-            label='Internal_link',
-            label_msgid='Doormat_label_internal_link',
+            label='Collection',
+            label_msgid='Doormat_label_collection',
             i18n_domain='Doormat',
         ),
-        relationship="internally_links_to",
+        relationship="internally_references_to_collection",
+    ),
+    ReferenceField(
+        name='showMoreLink',
+        widget=ReferenceBrowserWidget(
+            label='Showmorelink',
+            label_msgid='Doormat_label_showMoreLink',
+            i18n_domain='Doormat',
+        ),
+    ),
+    StringField(
+        name='showMoreText',
+        widget=StringField._properties['widget'](
+            label='Showmoretext',
+            label_msgid='Doormat_label_showMoreText',
+            i18n_domain='Doormat',
+        ),
     ),
 
 ),
@@ -45,32 +61,32 @@ schema = Schema((
 ##code-section after-local-schema #fill in your manual code here
 ##/code-section after-local-schema
 
-DoormatReference_schema = BaseSchema.copy() + \
+DoormatCollection_schema = BaseSchema.copy() + \
+    getattr(DoormatMixin, 'schema', Schema(())).copy() + \
     schema.copy()
 
 ##code-section after-schema #fill in your manual code here
 ##/code-section after-schema
 
-class DoormatReference(BaseContent, BrowserDefaultMixin):
+class DoormatCollection(BaseContent, DoormatMixin, BrowserDefaultMixin):
     """
     """
     security = ClassSecurityInfo()
 
-    implements(interfaces.IDoormatReference)
+    implements(interfaces.IDoormatCollection)
 
-    meta_type = 'DoormatReference'
+    meta_type = 'DoormatCollection'
     _at_rename_after_creation = True
 
-    schema = DoormatReference_schema
+    schema = DoormatCollection_schema
 
     ##code-section class-header #fill in your manual code here
     ##/code-section class-header
 
     # Methods
 
-
-registerType(DoormatReference, PROJECTNAME)
-# end of class DoormatReference
+registerType(DoormatCollection, PROJECTNAME)
+# end of class DoormatCollection
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer

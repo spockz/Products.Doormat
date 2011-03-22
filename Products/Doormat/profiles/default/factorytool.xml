@@ -6,5 +6,6 @@
   <type portal_type="DoormatSection"/>
   <type portal_type="DoormatReference"/>
   <type portal_type="DoormatMixin"/>
+  <type portal_type="DoormatCollection"/>
  </factorytypes>
 </object>

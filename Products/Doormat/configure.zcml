@@ -1,9 +1,13 @@
-<configure xmlns="http://namespaces.zope.org/zope" 
-           xmlns:browser="http://namespaces.zope.org/browser" 
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
            xmlns:five="http://namespaces.zope.org/five"
            xmlns:i18n="http://namespaces.zope.org/i18n"
            i18n_domain="Doormat">
-  
+
+  <!-- ##code-section configure.zcml.header -->
+  <include package=".browser" />
+  <!-- ##/code-section configure.zcml.header -->
+
   <i18n:registerTranslations directory="locales" />
 
   <include file="profiles.zcml" />
@@ -11,7 +15,6 @@
 
 
   <!-- ##code-section configure.zcml -->
-  <include package=".browser" />
   <!-- ##/code-section configure.zcml -->
 
 </configure>

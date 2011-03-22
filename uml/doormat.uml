@@ -4,7 +4,7 @@
     <documentation>
       <authorname></authorname>
       <authoremail></authoremail>
-      <version>0.30</version>
+      <version>0.32.1</version>
       <description>
         
       </description>
@@ -48,10 +48,10 @@
 			UML 1.4
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Wed Oct 13 16:45:18 CEST 2010'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Mar 22 10:29:56 CET 2011'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
-      <XMI.exporterVersion>0.30(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
+      <XMI.exporterVersion>0.32.1(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
     </XMI.documentation>
     <XMI.metamodel xmi.name="UML" xmi.version="1.4"/></XMI.header>
   <XMI.content>
@@ -3175,6 +3175,156 @@
                 </UML:AssociationEnd>
               </UML:Association.connection>
             </UML:Association>
+            <UML:Association xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBE'
+              name = '' isSpecification = 'false' isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
+              <UML:Association.connection>
+                <UML:AssociationEnd xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBF'
+                  visibility = 'public' isSpecification = 'false' isNavigable = 'true' ordering = 'unordered'
+                  aggregation = 'aggregate' targetScope = 'instance' changeability = 'changeable'>
+                  <UML:AssociationEnd.multiplicity>
+                    <UML:Multiplicity xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC2'>
+                      <UML:Multiplicity.range>
+                        <UML:MultiplicityRange xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC1'
+                          lower = '1' upper = '1'/>
+                      </UML:Multiplicity.range>
+                    </UML:Multiplicity>
+                  </UML:AssociationEnd.multiplicity>
+                  <UML:AssociationEnd.participant>
+                    <UML:Class xmi.idref = '127-0-1-1--4046b3db:128b49e7131:-8000:00000000000013C7'/>
+                  </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC0'
+                  visibility = 'public' isSpecification = 'false' isNavigable = 'true' ordering = 'unordered'
+                  aggregation = 'none' targetScope = 'instance' changeability = 'changeable'>
+                  <UML:AssociationEnd.participant>
+                    <UML:Class xmi.idref = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD'/>
+                  </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+              </UML:Association.connection>
+            </UML:Association>
+            <UML:Association xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCC'
+              name = '' isSpecification = 'false' isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
+              <UML:Association.connection>
+                <UML:AssociationEnd xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCD'
+                  visibility = 'public' isSpecification = 'false' isNavigable = 'true' ordering = 'unordered'
+                  aggregation = 'composite' targetScope = 'instance' changeability = 'changeable'>
+                  <UML:AssociationEnd.multiplicity>
+                    <UML:Multiplicity xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DD0'>
+                      <UML:Multiplicity.range>
+                        <UML:MultiplicityRange xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCF'
+                          lower = '1' upper = '1'/>
+                      </UML:Multiplicity.range>
+                    </UML:Multiplicity>
+                  </UML:AssociationEnd.multiplicity>
+                  <UML:AssociationEnd.participant>
+                    <UML:Class xmi.idref = '127-0-1-1--4046b3db:128b49e7131:-8000:00000000000013C7'/>
+                  </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+                <UML:AssociationEnd xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCE'
+                  visibility = 'public' isSpecification = 'false' isNavigable = 'true' ordering = 'unordered'
+                  aggregation = 'none' targetScope = 'instance' changeability = 'changeable'>
+                  <UML:AssociationEnd.multiplicity>
+                    <UML:Multiplicity xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DD2'>
+                      <UML:Multiplicity.range>
+                        <UML:MultiplicityRange xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DD1'
+                          lower = '1' upper = '1'/>
+                      </UML:Multiplicity.range>
+                    </UML:Multiplicity>
+                  </UML:AssociationEnd.multiplicity>
+                  <UML:AssociationEnd.participant>
+                    <UML:Class xmi.idref = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD'/>
+                  </UML:AssociationEnd.participant>
+                </UML:AssociationEnd>
+              </UML:Association.connection>
+            </UML:Association>
+            <UML:Class xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD'
+              name = 'DoormatCollection' visibility = 'public' isSpecification = 'false'
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' isActive = 'false'>
+              <UML:ModelElement.taggedValue>
+                <UML:TaggedValue xmi.id = '-64--88--72-113-7b84db25:12edce22535:-8000:0000000000001354'
+                  isSpecification = 'false'>
+                  <UML:TaggedValue.dataValue>from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget</UML:TaggedValue.dataValue>
+                  <UML:TaggedValue.type>
+                    <UML:TagDefinition xmi.idref = '7fbcc0f1-2d3c-513e-9dd5-3032e2da1bd1'/>
+                  </UML:TaggedValue.type>
+                </UML:TaggedValue>
+                <UML:TaggedValue xmi.id = '-64--88--72-113-7b84db25:12edce22535:-8000:0000000000001355'
+                  isSpecification = 'false'>
+                  <UML:TaggedValue.dataValue>Collection</UML:TaggedValue.dataValue>
+                  <UML:TaggedValue.type>
+                    <UML:TagDefinition xmi.idref = '51a494e5-1680-57f5-8a5d-46c6420d8171'/>
+                  </UML:TaggedValue.type>
+                </UML:TaggedValue>
+              </UML:ModelElement.taggedValue>
+              <UML:GeneralizableElement.generalization>
+                <UML:Generalization xmi.idref = '-64--88--72-113-7b84db25:12edce22535:-8000:0000000000001356'/>
+              </UML:GeneralizableElement.generalization>
+              <UML:Classifier.feature>
+                <UML:Attribute xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DD3'
+                  name = 'collection' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+                  changeability = 'changeable' targetScope = 'instance'>
+                  <UML:StructuralFeature.multiplicity>
+                    <UML:Multiplicity xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DD4'>
+                      <UML:Multiplicity.range>
+                        <UML:MultiplicityRange xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DD5'
+                          lower = '1' upper = '1'/>
+                      </UML:Multiplicity.range>
+                    </UML:Multiplicity>
+                  </UML:StructuralFeature.multiplicity>
+                  <UML:ModelElement.taggedValue>
+                    <UML:TaggedValue xmi.id = '-64--88--72-113-7b84db25:12edce22535:-8000:0000000000001353'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>internally_references_to_collection</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'd8173c3e-2367-5adf-9fee-a5f97447736b'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
+                  </UML:ModelElement.taggedValue>
+                  <UML:StructuralFeature.type>
+                    <UML:DataType xmi.idref = 'e85df323-29b1-5d10-98de-7c2a1c60f9da'/>
+                  </UML:StructuralFeature.type>
+                </UML:Attribute>
+                <UML:Attribute xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DD6'
+                  name = 'showMoreLink' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+                  changeability = 'changeable' targetScope = 'instance'>
+                  <UML:StructuralFeature.multiplicity>
+                    <UML:Multiplicity xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DD7'>
+                      <UML:Multiplicity.range>
+                        <UML:MultiplicityRange xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DD8'
+                          lower = '1' upper = '1'/>
+                      </UML:Multiplicity.range>
+                    </UML:Multiplicity>
+                  </UML:StructuralFeature.multiplicity>
+                  <UML:StructuralFeature.type>
+                    <UML:DataType xmi.idref = 'e85df323-29b1-5d10-98de-7c2a1c60f9da'/>
+                  </UML:StructuralFeature.type>
+                </UML:Attribute>
+                <UML:Attribute xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DDB'
+                  name = 'showMoreText' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+                  changeability = 'changeable' targetScope = 'instance'>
+                  <UML:StructuralFeature.multiplicity>
+                    <UML:Multiplicity xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DDC'>
+                      <UML:Multiplicity.range>
+                        <UML:MultiplicityRange xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DDD'
+                          lower = '1' upper = '1'/>
+                      </UML:Multiplicity.range>
+                    </UML:Multiplicity>
+                  </UML:StructuralFeature.multiplicity>
+                  <UML:StructuralFeature.type>
+                    <UML:DataType xmi.idref = '9627e80f-cde2-5780-9619-55e71d92d8ea'/>
+                  </UML:StructuralFeature.type>
+                </UML:Attribute>
+              </UML:Classifier.feature>
+            </UML:Class>
+            <UML:Generalization xmi.id = '-64--88--72-113-7b84db25:12edce22535:-8000:0000000000001356'
+              name = 'collection_extends_mixin' isSpecification = 'false'>
+              <UML:Generalization.child>
+                <UML:Class xmi.idref = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD'/>
+              </UML:Generalization.child>
+              <UML:Generalization.parent>
+                <UML:Class xmi.idref = '127-0-1-1--2f7f38ab:12917758aed:-8000:0000000000001307'/>
+              </UML:Generalization.parent>
+            </UML:Generalization>
           </UML:Namespace.ownedElement>
         </UML:Package>
         <UML:Class xmi.id = '127-0-1-1--4046b3db:128b49e7131:-8000:00000000000013C8'
@@ -3226,6 +3376,17 @@
             </UML:AssociationEnd>
           </UML:Association.connection>
         </UML:Association>
+        <UML:TagDefinition xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC3'
+          name = 'pointer' isSpecification = 'false'>
+          <UML:TagDefinition.multiplicity>
+            <UML:Multiplicity xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC5'>
+              <UML:Multiplicity.range>
+                <UML:MultiplicityRange xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC4'
+                  lower = '0' upper = '0'/>
+              </UML:Multiplicity.range>
+            </UML:Multiplicity>
+          </UML:TagDefinition.multiplicity>
+        </UML:TagDefinition>
       </UML:Namespace.ownedElement>
     </UML:Model>
     <UML:Multiplicity xmi.id = '127-0-1-1--4046b3db:128b49e7131:-8000:00000000000013E7'>
@@ -3342,6 +3503,48 @@
           lower = '1' upper = '1'/>
       </UML:Multiplicity.range>
     </UML:Multiplicity>
+    <UML:TaggedValue xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC6'
+      isSpecification = 'false'>
+      <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+      <UML:TaggedValue.type>
+        <UML:TagDefinition xmi.idref = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC3'/>
+      </UML:TaggedValue.type>
+    </UML:TaggedValue>
+    <UML:TaggedValue xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC7'
+      isSpecification = 'false'>
+      <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+      <UML:TaggedValue.type>
+        <UML:TagDefinition xmi.idref = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC3'/>
+      </UML:TaggedValue.type>
+    </UML:TaggedValue>
+    <UML:TaggedValue xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC8'
+      isSpecification = 'false'>
+      <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+      <UML:TaggedValue.type>
+        <UML:TagDefinition xmi.idref = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC3'/>
+      </UML:TaggedValue.type>
+    </UML:TaggedValue>
+    <UML:TaggedValue xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC9'
+      isSpecification = 'false'>
+      <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+      <UML:TaggedValue.type>
+        <UML:TagDefinition xmi.idref = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC3'/>
+      </UML:TaggedValue.type>
+    </UML:TaggedValue>
+    <UML:TaggedValue xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCA'
+      isSpecification = 'false'>
+      <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+      <UML:TaggedValue.type>
+        <UML:TagDefinition xmi.idref = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC3'/>
+      </UML:TaggedValue.type>
+    </UML:TaggedValue>
+    <UML:TaggedValue xmi.id = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCB'
+      isSpecification = 'false'>
+      <UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue>
+      <UML:TaggedValue.type>
+        <UML:TagDefinition xmi.idref = '-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DC3'/>
+      </UML:TaggedValue.type>
+    </UML:TaggedValue>
   </XMI.content>
 </XMI>
 <pgml description="org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram|342db3ca-4022-4992-a166-c38c7db692f8"
@@ -4219,7 +4422,7 @@
       justification="Center"
     >DoormatReference</text>
     <group name="Fig8.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[529, 353, 183, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[529, 353, 166, 0]"
          href="127-0-1-1--4046b3db:128b49e7131:-8000:00000000000013E5"
          fill="0"
          fillcolor="white"
@@ -4233,7 +4436,7 @@
       <rectangle name="Fig8.2.0"
         x="529"
         y="353"
-        width="183"
+        width="166"
         height="0"
         fill="0"
         fillcolor="white"
@@ -4826,6 +5029,236 @@
               y="149" />
       <lineto x="840"
               y="208" />
+    </path>
+  </group>
+  <group name="Fig16"
+       description="org.argouml.uml.diagram.static_structure.ui.FigClass[704, 336, 158, 117]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
+       href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
+       fill="1"
+       fillcolor="white"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+    </private>
+    
+    <rectangle name="Fig16.0"
+      x="704"
+      y="336"
+      width="158"
+      height="117"
+      fill="1"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    />
+    <text name="Fig16.1"
+      x="705"
+      y="337"
+      width="156"
+      height="22"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+      textcolor="black"
+      font="Dialog"
+      italic="false"
+      bold="false"
+      textsize="12"
+      justification="Center"
+    >DoormatCollection</text>
+    <group name="Fig16.2"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[705, 337, 154, 0]"
+         href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
+         fill="0"
+         fillcolor="white"
+         stroke="0"
+         strokecolor="black"
+         visibility="0"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig16.2.0"
+        x="705"
+        y="337"
+        width="154"
+        height="0"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+    </group>
+    <rectangle name="Fig16.3"
+      x="704"
+      y="359"
+      width="158"
+      height="1"
+      fill="1"
+      fillcolor="black"
+      stroke="1"
+      strokecolor="black"
+    />
+    <group name="Fig16.4"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[705, 360, 156, 63]"
+         href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
+         fill="0"
+         fillcolor="white"
+         stroke="0"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig16.4.0"
+        x="705"
+        y="360"
+        width="156"
+        height="63"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+      <text name="Fig16.4.1"
+        x="705"
+        y="360"
+        width="156"
+        height="16"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >collection : reference</text>
+      <text name="Fig16.4.2"
+        x="705"
+        y="376"
+        width="156"
+        height="16"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >showMoreLink : reference</text>
+      <text name="Fig16.4.3"
+        x="705"
+        y="392"
+        width="156"
+        height="22"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >showMoreText : string</text>
+    </group>
+    <rectangle name="Fig16.5"
+      x="704"
+      y="423"
+      width="158"
+      height="1"
+      fill="1"
+      fillcolor="black"
+      stroke="1"
+      strokecolor="black"
+    />
+    <group name="Fig16.6"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[705, 424, 156, 28]"
+         href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
+         fill="0"
+         fillcolor="white"
+         stroke="0"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig16.6.0"
+        x="705"
+        y="424"
+        width="156"
+        height="28"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+    </group>
+  </group>
+  <group name="Fig17"
+       description="org.argouml.uml.diagram.ui.FigAssociation"
+       href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCC"
+       sourceConnector="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCD"
+       destConnector="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCE"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+      sourcePortFig="Fig3"
+      destPortFig="Fig16"
+      sourceFigNode="Fig3"
+      destFigNode="Fig16"
+      <argouml:pathitem figname="Fig17.1"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
+                        ownerhref="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCC"
+                        angle="270.0"
+                        offset="25" />
+      <argouml:pathitem figname="Fig17.2"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigMultiplicity"
+                        ownerhref="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCD"
+                        angle="315.0"
+                        offset="5" />
+      <argouml:pathitem figname="Fig17.3"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigAssociationEndAnnotation"
+                        ownerhref="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCD"
+                        angle="45.0"
+                        offset="5" />
+      <argouml:pathitem figname="Fig17.4"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigMultiplicity"
+                        ownerhref="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCE"
+                        angle="225.0"
+                        offset="5" />
+      <argouml:pathitem figname="Fig17.5"
+                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
+                        figclassname="org.argouml.uml.diagram.ui.FigAssociationEndAnnotation"
+                        ownerhref="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DCE"
+                        angle="135.0"
+                        offset="5" />
+    </private>
+    <path name="Fig17.0"
+      description="org.argouml.gefext.ArgoFigPoly"
+      fill="0"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    >
+      <moveto x="663"
+              y="149" />
+      <lineto x="704"
+              y="336" />
     </path>
   </group>
 </pgml>

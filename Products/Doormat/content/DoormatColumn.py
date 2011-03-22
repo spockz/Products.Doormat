@@ -2,8 +2,8 @@
 #
 # File: DoormatColumn.py
 #
-# Copyright (c) 2010 by unknown <unknown>
-# Generator: ArchGenXML Version 2.5
+# Copyright (c) 2011 by unknown <unknown>
+# Generator: ArchGenXML Version 2.6
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)

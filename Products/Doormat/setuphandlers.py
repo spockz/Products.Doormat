@@ -2,8 +2,8 @@
 #
 # File: setuphandlers.py
 #
-# Copyright (c) 2010 by unknown <unknown>
-# Generator: ArchGenXML Version 2.5
+# Copyright (c) 2011 by unknown <unknown>
+# Generator: ArchGenXML Version 2.6
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -31,7 +31,7 @@ def isNotDoormatProfile(context):
 def updateRoleMappings(context):
     """after workflow changed update the roles mapping. this is like pressing
     the button 'Update Security Setting' and portal_workflow"""
-    if isNotDoormatProfile(context): return 
+    if isNotDoormatProfile(context): return
     wft = getToolByName(context.getSite(), 'portal_workflow')
     wft.updateRoleMappings()
 

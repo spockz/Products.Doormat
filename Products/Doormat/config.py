@@ -2,8 +2,8 @@
 #
 # File: Doormat.py
 #
-# Copyright (c) 2010 by unknown <unknown>
-# Generator: ArchGenXML Version 2.5
+# Copyright (c) 2011 by unknown <unknown>
+# Generator: ArchGenXML Version 2.6
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -38,6 +38,7 @@ ADD_CONTENT_PERMISSIONS = {
     'DoormatSection': 'Doormat: Add DoormatSection',
     'DoormatReference': 'Doormat: Add DoormatReference',
     'DoormatMixin': 'Doormat: Add DoormatMixin',
+    'DoormatCollection': 'Doormat: Add DoormatCollection',
 }
 
 setDefaultRoles('Doormat: Add Doormat', ('Manager','Owner'))
@@ -45,6 +46,7 @@ setDefaultRoles('Doormat: Add DoormatColumn', ('Manager','Owner'))
 setDefaultRoles('Doormat: Add DoormatSection', ('Manager','Owner'))
 setDefaultRoles('Doormat: Add DoormatReference', ('Manager','Owner'))
 setDefaultRoles('Doormat: Add DoormatMixin', ('Manager','Owner'))
+setDefaultRoles('Doormat: Add DoormatCollection', ('Manager','Owner'))
 
 product_globals = globals()
 

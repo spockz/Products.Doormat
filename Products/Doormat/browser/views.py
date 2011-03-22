@@ -76,6 +76,9 @@ class DoormatView(BrowserView):
                         link_class = "external-link"
                     elif item.portal_type == "Document":
                         text = item.getText()
+                    elif item.portal_type == "DoormatCollection"
+                        text = "Hi, collection"
+                        link_class = "internal_link"
                     
                     if not (text or url):
                         continue
