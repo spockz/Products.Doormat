@@ -52,6 +52,11 @@ msgstr ""
 msgid "Doormat_label_showMoreText"
 msgstr ""
 
+#. Default: "Showtime"
+#: content/DoormatCollection.py
+msgid "Doormat_label_showTime"
+msgstr ""
+
 #. Default: "Show title in Doormat"
 #: content/DoormatMixin.py
 msgid "Doormat_label_showTitle"

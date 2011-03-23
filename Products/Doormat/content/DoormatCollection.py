@@ -65,6 +65,14 @@ schema = Schema((
             i18n_domain='Doormat',
         ),
     ),
+    BooleanField(
+        name='showTime',
+        widget=BooleanField._properties['widget'](
+            label='Showtime',
+            label_msgid='Doormat_label_showTime',
+            i18n_domain='Doormat',
+        ),
+    ),
 
 ),
 )

@@ -7,6 +7,7 @@ from Products.Five import BrowserView
 from zope.interface import implements
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 
+from zope.component import getMultiAdapter
 from pprint import pprint
 
 class DoormatView(BrowserView):
@@ -79,21 +80,26 @@ class DoormatView(BrowserView):
                     elif item.portal_type == "Document":
                         text = item.getText()
                     elif item.portal_type == "DoormatCollection":
-                        if item.limit > 0:
-                          results = item.getCollection().queryCatalog(sort_limit=item.limit)[:item.limit]
-                        else:
-                          results = item.getCollection().queryCatalog()
+                        results = self.getCollection(item)
                       
+                        # Add links from collections
                         for nitem in results:
-                            obj = nitem.getObject()
-                            link_dict = {
+                            obj = nitem.getObject() 
+                            
+                            if (item.showTime):
+                              title = self.localizedTime(obj.modified()) + ' - ' + obj.title
+                            else: 
+                              title = obj.title
+                            
+                            
+                            section_links.append({
                                 'content': '', 
                                 'link_url': obj.absolute_url(), 
-                                'link_title': obj.title,
-                                'link_class': 'collection',
-                                }
-                            section_links.append(link_dict)
+                                'link_title': title,
+                                'link_class': 'collection-item',
+                                })
                          
+                        # Add the read more link if it is specified 
                         if item.getShowMoreLink():
                             section_links.append({
                                 'content': '',
@@ -120,25 +126,16 @@ class DoormatView(BrowserView):
             data.append(column_dict)
         return data
 
-    def getCollection(self, collection):
-        collection_path = collection
-        if not collection_path:
-            return None
-            
-        if collection_path.startswith('/'):
-            collection_path = collection_path[1:]
-
-        if not collection_path:
-            return None
-
-        portal_state = getMultiAdapter((self.context, self.request),
-                                       name=u'plone_portal_state')
-        portal = portal_state.portal()
-        if isinstance(collection_path, unicode):
-            #restrictedTraverse accept only strings
-            collection_path = str(collection_path)
-        return portal.restrictedTraverse(collection_path, default=None)
-
+    def getCollection(self, item):
+      if item.limit > 0:
+        results = item.getCollection().queryCatalog(sort_limit=item.limit)[:item.limit]
+      else:
+        results = item.getCollection().queryCatalog()
+        
+      return results
+      
+    def localizedTime(self, time):
+      return getMultiAdapter((self.context, self.request), name="plone").toLocalizedTime(time)  
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
 

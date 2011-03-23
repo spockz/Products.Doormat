@@ -4,7 +4,7 @@
         xmlns:i18n="http://xml.zope.org/namespaces/i18n"
         i18n:domain="plone">
    
- <property name="title" i18n:translate="">DoormataCollection</property>
+ <property name="title" i18n:translate="">DoormatCollection</property>
  <property name="description" i18n:translate=""></property>
  <property name="content_icon">DoormatCollection.gif</property>
  <property name="content_meta_type">DoormatCollection</property>

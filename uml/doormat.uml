@@ -48,7 +48,7 @@
 			UML 1.4
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Mar 22 22:00:03 CET 2011'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Wed Mar 23 10:38:31 CET 2011'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.32.1(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -3338,6 +3338,21 @@
                     <UML:DataType xmi.idref = 'e12f147a-d786-5cd7-a838-1bd9f02fdbf4'/>
                   </UML:StructuralFeature.type>
                 </UML:Attribute>
+                <UML:Attribute xmi.id = '-64--88--72-113-78bd338f:12edcfc60e5:-8000:0000000000001361'
+                  name = 'showTime' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+                  changeability = 'changeable' targetScope = 'instance'>
+                  <UML:StructuralFeature.multiplicity>
+                    <UML:Multiplicity xmi.id = '-64--88--72-113-78bd338f:12edcfc60e5:-8000:0000000000001362'>
+                      <UML:Multiplicity.range>
+                        <UML:MultiplicityRange xmi.id = '-64--88--72-113-78bd338f:12edcfc60e5:-8000:0000000000001363'
+                          lower = '1' upper = '1'/>
+                      </UML:Multiplicity.range>
+                    </UML:Multiplicity>
+                  </UML:StructuralFeature.multiplicity>
+                  <UML:StructuralFeature.type>
+                    <UML:DataType xmi.idref = '16a8d020-4c0a-58ce-993f-e6306abf0bbf'/>
+                  </UML:StructuralFeature.type>
+                </UML:Attribute>
               </UML:Classifier.feature>
             </UML:Class>
             <UML:Generalization xmi.id = '-64--88--72-113-7b84db25:12edce22535:-8000:0000000000001356'
@@ -5056,7 +5071,7 @@
     </path>
   </group>
   <group name="Fig16"
-       description="org.argouml.uml.diagram.static_structure.ui.FigClass[704, 336, 158, 117]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
+       description="org.argouml.uml.diagram.static_structure.ui.FigClass[704, 336, 170, 133]pathVisible=true;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
        href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
        fill="1"
        fillcolor="white"
@@ -5069,8 +5084,8 @@
     <rectangle name="Fig16.0"
       x="704"
       y="336"
-      width="158"
-      height="117"
+      width="170"
+      height="133"
       fill="1"
       fillcolor="white"
       stroke="1"
@@ -5079,7 +5094,7 @@
     <text name="Fig16.1"
       x="705"
       y="337"
-      width="156"
+      width="168"
       height="22"
       fill="0"
       fillcolor="white"
@@ -5091,7 +5106,7 @@
       bold="false"
       textsize="12"
       justification="Center"
-    >DoormatCollection</text>
+    >content::DoormatCollection</text>
     <group name="Fig16.2"
          description="org.argouml.uml.diagram.ui.FigStereotypesGroup[705, 337, 163, 0]"
          href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
@@ -5118,7 +5133,7 @@
     <rectangle name="Fig16.3"
       x="704"
       y="359"
-      width="158"
+      width="170"
       height="1"
       fill="1"
       fillcolor="black"
@@ -5126,7 +5141,7 @@
       strokecolor="black"
     />
     <group name="Fig16.4"
-         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[705, 360, 156, 72]"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[705, 360, 168, 88]"
          href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
          fill="0"
          fillcolor="white"
@@ -5139,8 +5154,8 @@
       <rectangle name="Fig16.4.0"
         x="705"
         y="360"
-        width="156"
-        height="72"
+        width="168"
+        height="88"
         fill="0"
         fillcolor="white"
         stroke="0"
@@ -5149,7 +5164,7 @@
       <text name="Fig16.4.1"
         x="705"
         y="360"
-        width="156"
+        width="168"
         height="16"
         fill="0"
         fillcolor="white"
@@ -5165,7 +5180,7 @@
       <text name="Fig16.4.2"
         x="705"
         y="376"
-        width="156"
+        width="168"
         height="16"
         fill="0"
         fillcolor="white"
@@ -5181,7 +5196,7 @@
       <text name="Fig16.4.3"
         x="705"
         y="392"
-        width="156"
+        width="168"
         height="16"
         fill="0"
         fillcolor="white"
@@ -5197,8 +5212,8 @@
       <text name="Fig16.4.4"
         x="705"
         y="408"
-        width="156"
-        height="22"
+        width="168"
+        height="16"
         fill="0"
         fillcolor="white"
         stroke="0"
@@ -5210,11 +5225,27 @@
         textsize="12"
         justification="Left"
       >limit : int</text>
+      <text name="Fig16.4.5"
+        x="705"
+        y="424"
+        width="168"
+        height="22"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >showTime : boolean</text>
     </group>
     <rectangle name="Fig16.5"
       x="704"
-      y="431"
-      width="158"
+      y="447"
+      width="170"
       height="1"
       fill="1"
       fillcolor="black"
@@ -5222,7 +5253,7 @@
       strokecolor="black"
     />
     <group name="Fig16.6"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[705, 432, 156, 21]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[705, 448, 168, 21]"
          href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
          fill="0"
          fillcolor="white"
@@ -5234,8 +5265,8 @@
       
       <rectangle name="Fig16.6.0"
         x="705"
-        y="432"
-        width="156"
+        y="448"
+        width="168"
         height="21"
         fill="0"
         fillcolor="white"
