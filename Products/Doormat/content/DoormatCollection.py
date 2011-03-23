@@ -38,6 +38,7 @@ schema = Schema((
             label_msgid='Doormat_label_collection',
             i18n_domain='Doormat',
         ),
+        allowed_types="('Topic')",
         relationship="internally_references_to_collection",
     ),
     ReferenceField(

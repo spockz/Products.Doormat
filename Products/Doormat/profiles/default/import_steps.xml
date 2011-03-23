@@ -8,7 +8,7 @@
     id="Doormat-Update-RoleMappings" 
     handler="Products.Doormat.setuphandlers.updateRoleMappings"
     title="Update Workflow role mappings for Doormat"
-    version="2011-03-23T10:38:49.700908">
+    version="2011-03-23T15:21:09.806795">
    <dependency step="Doormat-QI-dependencies"/>
    updates the workflow role mappings for Doormat
  </import-step>
@@ -17,7 +17,7 @@
     id="Doormat-postInstall" 
     handler="Products.Doormat.setuphandlers.postInstall"
     title="manual coded post-install for Doormat"
-    version="2011-03-23T10:38:49.700908">
+    version="2011-03-23T15:21:09.806795">
    <dependency step="Doormat-QI-dependencies"/>
    manual coded post-install for Doormat
  </import-step>

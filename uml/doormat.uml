@@ -48,7 +48,7 @@
 			UML 1.4
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Wed Mar 23 10:38:31 CET 2011'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Wed Mar 23 15:19:39 CET 2011'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.32.1(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -3279,6 +3279,13 @@
                         <UML:TagDefinition xmi.idref = 'd8173c3e-2367-5adf-9fee-a5f97447736b'/>
                       </UML:TaggedValue.type>
                     </UML:TaggedValue>
+                    <UML:TaggedValue xmi.id = '-64--88--72-113--3ed87035:12ee3112737:-8000:0000000000000DE7'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>(&apos;Topic&apos;)</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'a31a0693-c6e7-581b-a9fb-0b107bacd90c'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
                   </UML:ModelElement.taggedValue>
                   <UML:StructuralFeature.type>
                     <UML:DataType xmi.idref = 'e85df323-29b1-5d10-98de-7c2a1c60f9da'/>
@@ -5108,7 +5115,7 @@
       justification="Center"
     >content::DoormatCollection</text>
     <group name="Fig16.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[705, 337, 163, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[705, 337, 168, 0]"
          href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
          fill="0"
          fillcolor="white"
@@ -5122,7 +5129,7 @@
       <rectangle name="Fig16.2.0"
         x="705"
         y="337"
-        width="163"
+        width="168"
         height="0"
         fill="0"
         fillcolor="white"

@@ -80,35 +80,39 @@ class DoormatView(BrowserView):
                     elif item.portal_type == "Document":
                         text = item.getText()
                     elif item.portal_type == "DoormatCollection":
-                        results = self.getCollection(item)
+                        if item.getCollection().portal_type == "Topic":
+                          results = self.getCollection(item)
                       
-                        # Add links from collections
-                        for nitem in results:
-                            obj = nitem.getObject() 
+                          # Add links from collections
+                          for nitem in results:
+                              obj = nitem.getObject() 
                             
-                            if (item.showTime):
-                              title = self.localizedTime(obj.modified()) + ' - ' + obj.title
-                            else: 
-                              title = obj.title
+                              if (item.showTime):
+                                title = self.localizedTime(obj.modified()) + ' - ' + obj.title
+                              else: 
+                                title = obj.title
                             
                             
-                            section_links.append({
-                                'content': '', 
-                                'link_url': obj.absolute_url(), 
-                                'link_title': title,
-                                'link_class': 'collection-item',
-                                })
+                              section_links.append({
+                                  'content': '', 
+                                  'link_url': obj.absolute_url(), 
+                                  'link_title': title,
+                                  'link_class': 'collection-item',
+                                  })
                          
-                        # Add the read more link if it is specified 
-                        if item.getShowMoreLink():
-                            section_links.append({
-                                'content': '',
-                                'link_url': item.getShowMoreLink().absolute_url(),
-                                'link_title': item.showMoreText,
-                                'link_class': 'read-more'
-                            })  
+                          # Add the read more link if it is specified 
+                          if item.getShowMoreLink():
+                              section_links.append({
+                                  'content': '',
+                                  'link_url': item.getShowMoreLink().absolute_url(),
+                                  'link_title': item.showMoreText,
+                                  'link_class': 'read-more'
+                              })  
                         
-                        continue
+                          continue
+                        else:
+                          url = ''
+                          text = item.id+': This is not a collection, but a ' + item.getCollection().portal_type + ' :-)'
                              
                     if not (text or url):
                         continue
